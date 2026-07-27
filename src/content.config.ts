@@ -10,6 +10,7 @@ const writings = defineCollection({
     date: z.coerce.date(),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
+    pinned: z.boolean().default(false),
   }),
 })
 

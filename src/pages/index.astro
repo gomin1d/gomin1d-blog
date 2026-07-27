@@ -5,6 +5,8 @@ import WritingCard from "@components/section/writings/WritingCard.astro"
 import { getWritings } from "@utils/getContent"
 
 const writingEntries = await getWritings()
+const pinnedEntries = writingEntries.filter((entry) => entry.data.pinned)
+const regularEntries = writingEntries.filter((entry) => !entry.data.pinned)
 ---
 
 <BaseLayout
@@ -12,10 +14,23 @@ const writingEntries = await getWritings()
   description="Статті, нотатки та архів публікацій gomin1d."
 >
   <Prose>
-    <h1>Статті</h1>
-    <div class="not-prose flex flex-col gap-y-8">
+    {
+      pinnedEntries.length > 0 && (
+        <>
+          <h1>Закріплені статті</h1>
+          <div class="not-prose flex flex-col gap-y-2">
+            {pinnedEntries.map((writingEntry) => (
+              <WritingCard writingEntry={writingEntry} />
+            ))}
+          </div>
+        </>
+      )
+    }
+
+    <h1 class="mt-8!">Статті</h1>
+    <div class="not-prose flex flex-col gap-y-2">
       {
-        writingEntries.map((writingEntry) => (
+        regularEntries.map((writingEntry) => (
           <WritingCard writingEntry={writingEntry} />
         ))
       }

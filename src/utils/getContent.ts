@@ -24,12 +24,18 @@ export async function getContent<T extends CollectionKey>(
 
   const filtered = drafts ? items : items.filter(excludeDrafts)
   const sorted = sort
-    ? filtered.sort((a, b) =>
-        sortByDateDesc(
+    ? filtered.sort((a, b) => {
+        const pinnedDifference =
+          Number("pinned" in b.data && b.data.pinned) -
+          Number("pinned" in a.data && a.data.pinned)
+
+        if (pinnedDifference !== 0) return pinnedDifference
+
+        return sortByDateDesc(
           "date" in a.data ? (a.data.date ?? new Date(0)) : new Date(0),
           "date" in b.data ? (b.data.date ?? new Date(0)) : new Date(0)
         )
-      )
+      })
     : filtered
   return sorted
 }
