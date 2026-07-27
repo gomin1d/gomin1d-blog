@@ -25,6 +25,63 @@ const formattedDate = formatDate(date, "long")
 
     <PostTags tags={tags} />
 
-    <Back label="Back to Writings" href="/writings" class="mt-8" />
+    <Back label="До всіх статей" href="/" class="mt-8" />
   </Prose>
 </BaseLayout>
+
+<script>
+  async function renderMermaidDiagrams() {
+    const codeBlocks = Array.from(
+      document.querySelectorAll<HTMLElement>('pre[data-language="mermaid"]')
+    )
+
+    if (codeBlocks.length === 0) return
+
+    const diagrams = codeBlocks.map((codeBlock) => {
+      const lines = Array.from(
+        codeBlock.querySelectorAll<HTMLElement>(".ec-line .code")
+      )
+      const source =
+        lines.length > 0
+          ? lines.map((line) => line.textContent ?? "").join("\n")
+          : (codeBlock.textContent ?? "")
+
+      const diagram = document.createElement("div")
+      diagram.className = "mermaid not-prose my-8 overflow-x-auto"
+      diagram.textContent = source
+
+      const expressiveCodeFrame = codeBlock.closest("figure")
+      ;(expressiveCodeFrame ?? codeBlock).replaceWith(diagram)
+
+      return diagram
+    })
+
+    const { default: mermaid } = await import("mermaid")
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: "strict",
+      theme: window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "default",
+    })
+
+    await mermaid.run({ nodes: diagrams })
+  }
+
+  document.addEventListener("astro:page-load", renderMermaidDiagrams)
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderMermaidDiagrams, {
+      once: true,
+    })
+  } else {
+    void renderMermaidDiagrams()
+  }
+</script>
+
+<style is:global>
+  .mermaid svg {
+    height: auto;
+    max-width: 100%;
+  }
+</style>

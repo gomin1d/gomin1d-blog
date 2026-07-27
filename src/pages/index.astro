@@ -1,0 +1,24 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import Prose from "@components/common/Prose.astro"
+import WritingCard from "@components/section/writings/WritingCard.astro"
+import { getWritings } from "@utils/getContent"
+
+const writingEntries = await getWritings()
+---
+
+<BaseLayout
+  title="Статті"
+  description="Статті, нотатки та архів публікацій gomin1d."
+>
+  <Prose>
+    <h1>Статті</h1>
+    <div class="not-prose flex flex-col gap-y-8">
+      {
+        writingEntries.map((writingEntry) => (
+          <WritingCard writingEntry={writingEntry} />
+        ))
+      }
+    </div>
+  </Prose>
+</BaseLayout>

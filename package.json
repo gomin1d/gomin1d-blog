@@ -7,6 +7,9 @@
   },
   "scripts": {
     "new": "node scripts/new-writing.mjs",
+    "migrate:discourse": "node scripts/migrate-discourse.mjs",
+    "fix:discourse-media": "node scripts/fix-discourse-media.mjs",
+    "check:discourse-media": "node scripts/fix-discourse-media.mjs --check",
     "dev": "astro dev --host",
     "build": "astro build",
     "deploy": "npm run build && wrangler deploy",
@@ -26,6 +29,7 @@
     "astro-expressive-code": "^0.43.1",
     "astro-icon": "^1.1.5",
     "mdast-util-to-string": "^4.0.0",
+    "mermaid": "^11.16.0",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-external-links": "^3.0.0",

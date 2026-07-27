@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-07-27T15:38:27.807Z",
+  "source": "discord-backup-extracted\\dump.sql.gz",
+  "articles": 99,
+  "comments": 208,
+  "skipped": {
+    "privateOrNonRegular": 70,
+    "restrictedCategory": 4,
+    "deletedOrInvisible": 16,
+    "missingFirstPost": 0
+  },
+  "unresolvedUploadLinks": 0
+}
