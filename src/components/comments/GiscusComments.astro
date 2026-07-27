@@ -1,0 +1,57 @@
+<section class="m-0 p-0" aria-label="Коментарі" data-giscus-comments>
+  <h2 id="коментарі">
+    <a
+      class="heading-anchor"
+      aria-label="Посилання на секцію коментарів"
+      href="#коментарі">Коментарі</a
+    >
+  </h2>
+  <div class="giscus not-prose m-0"></div>
+</section>
+
+<script>
+  const giscusAttributes = {
+    src: "https://giscus.app/client.js",
+    "data-repo": "gomin1d/gomin1d-blog",
+    "data-repo-id": "R_kgDOTk_bDQ",
+    "data-category": "Comments",
+    "data-category-id": "DIC_kwDOTk_bDc4DCGDu",
+    "data-mapping": "pathname",
+    "data-strict": "1",
+    "data-reactions-enabled": "0",
+    "data-emit-metadata": "0",
+    "data-input-position": "top",
+    "data-theme": "light",
+    "data-lang": "uk",
+    "data-loading": "lazy",
+    crossorigin: "anonymous",
+  }
+
+  function loadGiscus() {
+    const container = document.querySelector<HTMLElement>(
+      "[data-giscus-comments]"
+    )
+    if (!container || container.querySelector(".giscus-frame")) return
+
+    const oldLoader = container.querySelector("script[data-giscus-loader]")
+    if (oldLoader) oldLoader.remove()
+
+    const script = document.createElement("script")
+    script.dataset.giscusLoader = "true"
+    script.async = true
+
+    for (const [name, value] of Object.entries(giscusAttributes)) {
+      script.setAttribute(name, value)
+    }
+
+    container.append(script)
+  }
+
+  document.addEventListener("astro:page-load", loadGiscus)
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", loadGiscus, { once: true })
+  } else {
+    loadGiscus()
+  }
+</script>

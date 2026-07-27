@@ -304,3 +304,62 @@
     @apply text-muted-foreground/75;
   }
 }
+
+/*
+ * Imported comments are rendered from Markdown, but should not inherit the
+ * spacious article rhythm. Keep these rules outside Tailwind layers so they
+ * reliably take precedence over the typography plugin.
+ */
+.prose h2#коментарі-з-discourse {
+  margin-block: 2rem 0.875rem;
+  font-size: 1.125rem;
+}
+
+.prose h2#коментарі-з-discourse ~ p {
+  margin-block: 0 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--muted-foreground);
+}
+
+.prose h2#коментарі-з-discourse ~ blockquote {
+  margin-block: 0;
+  border-left-width: 2px;
+  border-radius: 0 0.25rem 0.25rem 0;
+  padding: 0.45rem 0.75rem;
+  background: color-mix(in oklab, var(--muted) 45%, transparent);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+.prose h2#коментарі-з-discourse ~ blockquote p {
+  margin: 0;
+  color: inherit;
+}
+
+.prose h2#коментарі-з-discourse ~ hr {
+  margin-block: 0.75rem;
+}
+
+.prose h2#коментарі-з-discourse ~ :is(ul, ol, pre) {
+  margin-block: 0.35rem;
+  font-size: 0.8125rem;
+}
+
+.prose section[data-giscus-comments] {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.prose section[data-giscus-comments] .giscus-frame {
+  display: block;
+}
+
+.prose h2#коментарі-з-discourse ~ section[data-giscus-comments] {
+  margin-top: 0.75rem;
+}
+
+.prose section[data-giscus-comments] > h2 {
+  margin-block: 0 0.75rem;
+  font-size: 1.125rem;
+}
