@@ -2,7 +2,7 @@
 title: "Контакти олексія ковальчука @gomin1d"
 date: "2022-11-15 20:55:53.923501"
 tags: []
-draft: false
+draft: true
 ---
 Контакти 
 * Signal - `@gomin1d.99` або [https://signal.me/#eu/Rpsi5fXOV4IvYyBpzcFsoj42r2S2lyA0X0H8J8g1nKprudxlqqVIn71c7tD7rMO+](https://signal.me/#eu/Rpsi5fXOV4IvYyBpzcFsoj42r2S2lyA0X0H8J8g1nKprudxlqqVIn71c7tD7rMO+)

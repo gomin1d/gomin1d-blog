@@ -2,7 +2,7 @@
 title: "Іі"
 date: "2022-11-07 18:52:34.222637"
 tags: []
-draft: false
+draft: true
 ---
 ніксон сігма
 

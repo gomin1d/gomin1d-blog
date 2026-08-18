@@ -2,7 +2,7 @@
 title: "Діскорд гомін1дів"
 date: "2022-11-08 19:33:49.148998"
 tags: []
-draft: false
+draft: true
 ---
 Ми створили свій дискорд сервер для гомінід1в https://discord.gg/nS3TNFkm4S
 

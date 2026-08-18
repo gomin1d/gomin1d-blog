@@ -2,7 +2,7 @@
 title: "Викриття статті \"Топ 5 лучших практик разработки сервера | Секретный слив от кодеров Mineland\" від @pawsashatoy"
 date: "2024-05-03 15:04:50.2873"
 tags: ["java"]
-draft: false
+draft: true
 ---
 Викриття статті /writings/discourse/166-5-mineland від @pawsashatoy.
 

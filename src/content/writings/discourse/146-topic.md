@@ -2,7 +2,7 @@
 title: "Кактус засох"
 date: "2023-07-20 02:01:33.089541"
 tags: []
-draft: false
+draft: true
 ---
 До:
 ![P90402-192638|675x500](/discourse-uploads/3a491f5456b0eb41acab289a195951230e67f774.jpeg)

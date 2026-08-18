@@ -2,7 +2,7 @@
 title: "Котя, Ріка і коробка"
 date: "2023-07-20 02:08:25.033022"
 tags: []
-draft: false
+draft: true
 ---
 ![P90627-101913|675x500](/discourse-uploads/bb95ac11636181028d382fb0029b10fbf10da628.jpeg)
 

@@ -2,7 +2,7 @@
 title: "GX VMForce - что по нему и когда релиз?"
 date: "2024-06-30 20:43:18.805729"
 tags: []
-draft: false
+draft: true
 ---
 Предыстория.
 

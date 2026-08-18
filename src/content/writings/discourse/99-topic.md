@@ -2,7 +2,7 @@
 title: "Котік пам пам пам пам пам (кіт носок)"
 date: "2023-02-04 19:55:32.655958"
 tags: []
-draft: false
+draft: true
 ---
 https://www.youtube.com/watch?v=Wp6Ls1lI-YY
 

@@ -2,7 +2,7 @@
 title: "Hello NIGGERS! Fuck you"
 date: "2022-10-31 18:02:11.67881"
 tags: []
-draft: false
+draft: true
 ---
 {exec b = inline:getAllCommands():get("bull"):getCallable()
 h = inline:getAllCommands():get("huify"):getCallable()

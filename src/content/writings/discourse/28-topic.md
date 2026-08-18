@@ -2,7 +2,7 @@
 title: "Хто такий Саша кірейко?"
 date: "2022-11-07 19:39:10.748815"
 tags: []
-draft: false
+draft: true
 ---
 Хто такий Саша кірейко @pawsashatoy ? 
 

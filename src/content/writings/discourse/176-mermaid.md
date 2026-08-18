@@ -2,7 +2,7 @@
 title: "На цей форум додана підтримка mermaid"
 date: "2024-12-03 00:43:19.743462"
 tags: []
-draft: false
+draft: true
 ---
 Mermaid дозволяє робити такі діаграми:
 

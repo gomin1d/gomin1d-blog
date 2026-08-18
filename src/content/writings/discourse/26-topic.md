@@ -2,7 +2,7 @@
 title: "Мінуси саші кірейко"
 date: "2022-11-07 19:19:12.193333"
 tags: []
-draft: false
+draft: true
 ---
 Як ви вважаєте, які є мінуси у саші кірейко @pawsashatoy ? :thinking:
 
